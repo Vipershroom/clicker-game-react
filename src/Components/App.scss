@@ -27,12 +27,17 @@
 .shop {
     padding-top: 25px;
     display: grid;
-    grid-area: 
+    grid-template-areas: 
     "header header header"
     "item1 item2 item3"
     "item4 item5 item6";
 }
 
 .head {
-    grid-area: head;
+    grid-area: header;
+    text-align: center;
+}
+
+.item1 {
+    grid-area: item1;
 }
