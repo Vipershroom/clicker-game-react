@@ -3,8 +3,6 @@ import './App.scss'
 import './App'
 import { useState } from 'react'
 
-let modifier
-
 function App() {
 
     const [count, setCount] = useState(0)
