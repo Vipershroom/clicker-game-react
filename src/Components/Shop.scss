@@ -8,8 +8,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
-    .head{
+    .head {
         grid-column: 1/ 4;
-        text-align: center;
     }
 }
