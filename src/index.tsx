@@ -4,7 +4,7 @@ import './global.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello World!</h1>
+    <h1>Welcome to my Clicker Game</h1>
   </React.StrictMode>,
   document.getElementById('root')
 );
