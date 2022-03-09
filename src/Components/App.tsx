@@ -17,17 +17,6 @@ function App() {
                 <button className="btn" onClick={() => setCount(count + 1)} >Click here!</button>
                 <button className="btn">Shop</button>
             </div>
-            <div className='shop'>
-                <h2 className='head'>Shop</h2>
-                <div>
-                    2x Multiplier
-                </div>
-                <div>4x Multiplier</div>
-                <div>Mr.Zom</div>
-                <div>Autoclicker</div>
-                <div>6x Multiplier</div>
-                <div>10000000x Multiplier</div>
-            </div>
         </div>
     )
 }

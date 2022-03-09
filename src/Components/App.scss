@@ -24,19 +24,3 @@
     }
 }
 
-.shop {
-    padding-top: 25px;
-    display: grid;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-    .head{
-        grid-column: 1/ 4;
-        text-align: center;
-    }
-}
-
