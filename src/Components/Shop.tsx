@@ -8,13 +8,29 @@ function Shop() {
             <div className='shop'>
                 <h2 className='head'>Shop</h2>
                 <div>
-                    2x Multiplier
+                    <p>2x Multiplier</p>
+                    <button className='buy-btn'>Buy</button>
                 </div>
-                <div>4x Multiplier</div>
-                <div>Mr.Zom</div>
-                <div>Autoclicker</div>
-                <div>6x Multiplier</div>
-                <div>10000000x Multiplier</div>
+                <div>
+                    <p>4x Multiplier</p>
+                    <button className='buy-btn'>Buy</button>
+                </div>
+                <div>
+                    <p>Mr.Zom</p>
+                    <button className='buy-btn'>Buy</button>    
+                </div>
+                <div>
+                    <p>Autoclicker</p>
+                    <button className='buy-btn'>Buy</button>    
+                </div>
+                <div>
+                    <p>6x Multiplier</p>
+                    <button className='buy-btn'>Buy</button>    
+                </div>
+                <div>
+                    <p>10000000x Multiplier</p>
+                    <button className='buy-btn'>Buy</button>    
+                </div>
             </div>
         </div>
     )
