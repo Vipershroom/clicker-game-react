@@ -3,7 +3,7 @@ import './App.scss'
 import './App'
 import { useState } from 'react'
 
-
+let modifier
 
 function App() {
 
@@ -16,6 +16,9 @@ function App() {
                 <h3>Count: {count}</h3>
                 <button className="btn" onClick={() => setCount(count + 1)} >Click here!</button>
                 <button className="btn">Shop</button>
+            </div>
+            <div className='shop'>
+                <h2 className='head'>Shop</h2>
             </div>
         </div>
     )
