@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import './Shop.scss'
+import {useContext} from 'react'
 
+
+
+let countMod = 1
 
 function Shop() {
+
+    const [countMod, setCountMod] = useState(1)
+
     return(
         <div>
             <div className='shop'>
                 <h2 className='head'>Shop</h2>
                 <div>
                     <p>2x Multiplier</p>
-                    <button className='2x'>Buy</button>
+                    <button onClick={() => {}}>Buy</button>
                 </div>
                 <div>
                     <p>4x Multiplier</p>
@@ -37,3 +44,4 @@ function Shop() {
 }
 
 export default Shop
+export const ShopContext = React.createContext(countMod)
