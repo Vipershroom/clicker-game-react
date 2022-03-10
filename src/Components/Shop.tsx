@@ -8,15 +8,13 @@ let countMod = 1
 
 function Shop() {
 
-    const [countMod, setCountMod] = useState(1)
-
     return(
         <div>
             <div className='shop'>
                 <h2 className='head'>Shop</h2>
                 <div>
                     <p>2x Multiplier</p>
-                    <button onClick={() => {}}>Buy</button>
+                    <button onClick={() => countMod += 2}>Buy</button>
                 </div>
                 <div>
                     <p>4x Multiplier</p>
