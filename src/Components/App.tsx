@@ -6,6 +6,10 @@ import './Shop.scss'
 
 let clickMod = 1
 
+let shopUpgrades = {
+    zom: false
+}
+
 function App() {
 
     let [click, setclick] = useState(0)
@@ -42,7 +46,16 @@ function App() {
                 </div>
                 <div>
                     <p>Mr.Zom</p>
-                    <button className='zom'>Buy</button>    
+                    <p>50 clicks</p>
+                    <button className='zom' onClick={() => {
+                        if (click >= 50 && shopUpgrades.zom == false) {
+                            setclick(click -= 50)
+                            setInterval(() => {
+                                setclick(click += 1)
+                            }, 5000)
+                            shopUpgrades.zom = true
+                        }
+                    }}>Buy</button>    
                 </div>
                 <div>
                     <p>Autoclicker</p>
