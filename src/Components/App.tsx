@@ -1,7 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './App.scss'
 import './App'
-import { useState } from 'react'
 import './Shop.scss'
 
 let clickMod = 1
