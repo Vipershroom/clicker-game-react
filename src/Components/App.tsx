@@ -32,7 +32,13 @@ function App() {
                 </div>
                 <div>
                     <p>4x Multiplier</p>
-                    <button className='4x'>Buy</button>
+                    <p>75 clicks</p>
+                    <button className='4x' onClick={() => {
+                        if (click >= 75) {
+                            clickMod *= 4
+                            setclick(click -= 75)
+                        }
+                    }}>Buy</button>
                 </div>
                 <div>
                     <p>Mr.Zom</p>
