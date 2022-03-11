@@ -47,7 +47,7 @@ function App() {
                     <p>Mr.Zom</p>
                     <p>50 clicks</p>
                     <button className='zom' onClick={() => {
-                        if (click >= 50 && shopUpgrades.zom == false) {
+                        if (click >= 50 && shopUpgrades.zom === false) {
                             setclick(click - 50)
                             setInterval(() => {
                                 setclick(click => click + 1)
