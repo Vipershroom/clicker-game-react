@@ -105,7 +105,7 @@ function App() {
                 </div>
                 <div>
                     <p>10000000x Multiplier</p>
-                    <p>100000000</p>
+                    <p>100000000 clicks</p>
                     <button className='infinite'>Buy</button>    
                 </div>
             </div>
