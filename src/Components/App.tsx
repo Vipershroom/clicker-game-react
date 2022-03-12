@@ -33,8 +33,8 @@ function App() {
                     <li>4x: {}</li>
                     <li>Mr.zom: {}</li>
                     <li>Autoclicker: {}</li>
-                    <li></li>
-                    <li></li>
+                    <li>6x: {}</li>
+                    <li>10000000x: {}</li>
                 </ul>
             </div>
         )
