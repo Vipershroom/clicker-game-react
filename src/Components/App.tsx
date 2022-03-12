@@ -95,14 +95,17 @@ function App() {
                 </div>
                 <div>
                     <p>Autoclicker</p>
+                    <p>200 clicks</p>
                     <button className='autoclicker'>Buy</button>    
                 </div>
                 <div>
                     <p>6x Multiplier</p>
+                    <p>500 clicks</p>
                     <button className='6x'>Buy</button>    
                 </div>
                 <div>
                     <p>10000000x Multiplier</p>
+                    <p>100000000</p>
                     <button className='infinite'>Buy</button>    
                 </div>
             </div>
