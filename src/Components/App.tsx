@@ -12,6 +12,10 @@ let shopUpgrades = {
     zom2: false
 }
 
+let upgradeCount = {
+    zom: 0,
+}
+
 function App() {
 
     let [click, setclick] = useState(0)
@@ -20,20 +24,20 @@ function App() {
 
     let [zom, setZom] = useState(twoX[0])
 
-    // const UpgradeList = () => {
-    //     return (
-    //         <div>
-    //             <ul>
-    //                 <li>2x: </li>
-    //                 <li></li>
-    //                 <li></li>
-    //                 <li></li>
-    //                 <li></li>
-    //                 <li></li>
-    //             </ul>
-    //         </div>
-    //     )
-    // }
+    const UpgradeList = (props:any) => {
+        return (
+            <div>
+                <ul>
+                    <li>2x: {props.name}</li>
+                    <li>4x: {}</li>
+                    <li>Mr.zom: {}</li>
+                    <li>Autoclicker: {}</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        )
+    }
 
     return(
         <div>
@@ -55,11 +59,13 @@ function App() {
                             setclick(click -= 25)
                             shopUpgrades.zom = true
                             setZom(zom = twoX[1])
+                            upgradeCount.zom += 1
                         } else if (click >= 150 && shopUpgrades.zom2 === false) {
                             clickMod *= 2
                             setclick(click -= 150)
                             shopUpgrades.zom2 = true
                             setZom(zom = "Maxxed!")
+                            upgradeCount.zom += 1
                         }
                     }}>Buy</button>
                 </div>
@@ -100,6 +106,7 @@ function App() {
                 </div>
             </div>
             :null}
+            <UpgradeList name={upgradeCount.zom} />
         </div>
     )
 }
