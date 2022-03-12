@@ -13,14 +13,17 @@ function App() {
 
     let [click, setclick] = useState(0)
 
+    let [display, setDisplay] = useState(false)
+
     return(
         <div>
             <div className="spacing">
             <h1>Welcome to Clicker Game</h1>
                 <h3>Clicks: {click}</h3>
                 <button className="btn" onClick={() => setclick(click + clickMod)} >Click here!</button>
-                <button className="btn">Shop</button>
+                <button className="btn" onClick={() => setDisplay(display ? display = false : display = true)}>Shop</button>
             </div>
+            { display?
             <div className='shop'>
                 <h2 className='head'>Shop</h2>
                 <div>
@@ -69,6 +72,7 @@ function App() {
                     <button className='infinite'>Buy</button>    
                 </div>
             </div>
+            :null}
         </div>
     )
 }
