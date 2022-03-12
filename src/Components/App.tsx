@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.scss'
 import './App'
 import './Shop.scss'
-import './Upgrade.scss'
+import UpgradeList from './UpgradeList'
 
 let clickMod = 1
 
@@ -18,6 +18,8 @@ let upgradeCount = {
     twoX: 0,
 }
 
+
+
 function App() {
 
     let [click, setclick] = useState(0)
@@ -26,21 +28,7 @@ function App() {
 
     let [two, setTwo] = useState(twoX[0])
 
-    const UpgradeList = (props:any) => {
-        return (
-            <div className='wrapper'>
-                <h3>Upgrades</h3>
-                <ul className='upgrade-list'>
-                    <li>2x: {props.name}</li>
-                    <li>4x: {}</li>
-                    <li>Mr.zom: {}</li>
-                    <li>Autoclicker: {}</li>
-                    <li>6x: {}</li>
-                    <li>10000000x: {}</li>
-                </ul>
-            </div>
-        )
-    }
+    
 
     return(
         <div>

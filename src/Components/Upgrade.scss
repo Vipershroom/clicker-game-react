@@ -1,11 +1,12 @@
 .wrapper {
     margin-top: 10%;
-    margin-left: 4.9%;
     text-align: center;
+    margin-left: 6%;
 
     .upgrade-list {
             margin-top: 7%;
             display: flex;
+            justify-content: end;
             list-style: none;
 
             li {
