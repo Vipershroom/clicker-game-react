@@ -21,7 +21,7 @@ function App() {
             <h1>Welcome to Clicker Game</h1>
                 <h3>Clicks: {click}</h3>
                 <button className="btn" onClick={() => setclick(click + clickMod)} >Click here!</button>
-                <button className="btn" onClick={() => setDisplay(display ? display = false : display = true)}>Shop</button>
+                <button className="btn" onClick={() => setDisplay(!display)}>Shop</button>
             </div>
             { display?
             <div className='shop'>
