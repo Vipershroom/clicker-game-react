@@ -15,8 +15,8 @@ function App() {
 
     return(
         <div>
-            <h1>Welcome to Clicker Game</h1>
             <div className="spacing">
+            <h1>Welcome to Clicker Game</h1>
                 <h3>Clicks: {click}</h3>
                 <button className="btn" onClick={() => setclick(click + clickMod)} >Click here!</button>
                 <button className="btn">Shop</button>
