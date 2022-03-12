@@ -5,8 +5,11 @@ import './Shop.scss'
 
 let clickMod = 1
 
+const twoX = ['25 clicks', '150 clicks']
+
 let shopUpgrades = {
-    zom: false
+    zom: false,
+    zom2: false
 }
 
 function App() {
@@ -14,6 +17,23 @@ function App() {
     let [click, setclick] = useState(0)
 
     let [display, setDisplay] = useState(false)
+
+    let [zom, setZom] = useState(twoX[0])
+
+    // const UpgradeList = () => {
+    //     return (
+    //         <div>
+    //             <ul>
+    //                 <li>2x: </li>
+    //                 <li></li>
+    //                 <li></li>
+    //                 <li></li>
+    //                 <li></li>
+    //                 <li></li>
+    //             </ul>
+    //         </div>
+    //     )
+    // }
 
     return(
         <div>
@@ -28,11 +48,18 @@ function App() {
                 <h2 className='head'>Shop</h2>
                 <div>
                     <p>2x Multiplier</p>
-                    <p>25 clicks</p>
+                    <p>{zom}</p>
                     <button onClick={() => {
-                        if (click >= 25) {
+                        if (click >= 25 && shopUpgrades.zom === false) {
                             clickMod *= 2
                             setclick(click -= 25)
+                            shopUpgrades.zom = true
+                            setZom(zom = twoX[1])
+                        } else if (click >= 150 && shopUpgrades.zom2 === false) {
+                            clickMod *= 2
+                            setclick(click -= 150)
+                            shopUpgrades.zom2 = true
+                            setZom(zom = "Maxxed!")
                         }
                     }}>Buy</button>
                 </div>
