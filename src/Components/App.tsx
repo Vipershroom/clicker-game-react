@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.scss'
 import './App'
 import './Shop.scss'
+import './Upgrade.scss'
 
 let clickMod = 1
 
@@ -27,8 +28,9 @@ function App() {
 
     const UpgradeList = (props:any) => {
         return (
-            <div>
-                <ul>
+            <div className='wrapper'>
+                <h3>Upgrades</h3>
+                <ul className='upgrade-list'>
                     <li>2x: {props.name}</li>
                     <li>4x: {}</li>
                     <li>Mr.zom: {}</li>
@@ -110,7 +112,7 @@ function App() {
                 </div>
             </div>
             :null}
-            <UpgradeList name={upgradeCount.twoX} />
+            {display? <UpgradeList name={upgradeCount.twoX} />:null}
         </div>
     )
 }
