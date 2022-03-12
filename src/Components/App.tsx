@@ -8,12 +8,13 @@ let clickMod = 1
 const twoX = ['25 clicks', '150 clicks']
 
 let shopUpgrades = {
-    zom: false,
-    zom2: false
+    twoX: false,
+    twoX2: false,
+    zom: false
 }
 
 let upgradeCount = {
-    zom: 0,
+    twoX: 0,
 }
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
     let [display, setDisplay] = useState(false)
 
-    let [zom, setZom] = useState(twoX[0])
+    let [two, setTwo] = useState(twoX[0])
 
     const UpgradeList = (props:any) => {
         return (
@@ -52,20 +53,20 @@ function App() {
                 <h2 className='head'>Shop</h2>
                 <div>
                     <p>2x Multiplier</p>
-                    <p>{zom}</p>
+                    <p>{two}</p>
                     <button onClick={() => {
-                        if (click >= 25 && shopUpgrades.zom === false) {
+                        if (click >= 25 && shopUpgrades.twoX === false) {
                             clickMod *= 2
                             setclick(click -= 25)
-                            shopUpgrades.zom = true
-                            setZom(zom = twoX[1])
-                            upgradeCount.zom += 1
-                        } else if (click >= 150 && shopUpgrades.zom2 === false) {
+                            shopUpgrades.twoX = true
+                            setTwo(two = twoX[1])
+                            upgradeCount.twoX += 1
+                        } else if (click >= 150 && shopUpgrades.twoX2 === false) {
                             clickMod *= 2
                             setclick(click -= 150)
-                            shopUpgrades.zom2 = true
-                            setZom(zom = "Maxxed!")
-                            upgradeCount.zom += 1
+                            shopUpgrades.twoX2 = true
+                            setTwo(two = "Maxxed!")
+                            upgradeCount.twoX += 1
                         }
                     }}>Buy</button>
                 </div>
@@ -106,7 +107,7 @@ function App() {
                 </div>
             </div>
             :null}
-            <UpgradeList name={upgradeCount.zom} />
+            <UpgradeList name={upgradeCount.twoX} />
         </div>
     )
 }
