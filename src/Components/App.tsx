@@ -11,11 +11,21 @@ const twoX = ['25 clicks', '150 clicks']
 let shopUpgrades = {
     twoX: false,
     twoX2: false,
-    zom: false
+    fourX: false,
+    fourX2: false,
+    zom: false,
+    autoclicker: false,
+    sixX: false,
+    infinite: false,
 }
 
 let upgradeCount = {
     twoX: 0,
+    fourX: 0,
+    zom: 0,
+    autoclicker: 0,
+    sixX: 0,
+    infinite: 0,
 }
 
 
@@ -42,6 +52,8 @@ function App() {
             <div className='shop'>
                 <h2 className='head'>Shop</h2>
                 <div>
+                    {/* I literally have no clue why these buttons have classnames. 
+                    What was I thinking? */}
                     <p>2x Multiplier</p>
                     <p>{two}</p>
                     <button onClick={() => {
