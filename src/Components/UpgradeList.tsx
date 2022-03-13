@@ -8,10 +8,10 @@ const UpgradeList = (props:any) => {
             <ul className='upgrade-list'>
                 <li>2x: {props.x2}</li>
                 <li>4x: {props.x4}</li>
-                <li>Mr.zom: {}</li>
-                <li>Autoclicker: {}</li>
-                <li>6x: {}</li>
-                <li>10000000x: {}</li>
+                <li>Mr.zom: {props.zom}</li>
+                <li>Autoclicker: {props.autoclicker}</li>
+                <li>6x: {props.x6}</li>
+                <li>10000000x: {props.infinite}</li>
             </ul>
         </div>
     )
