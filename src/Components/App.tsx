@@ -38,6 +38,8 @@ function App() {
 
     let [two, setTwo] = useState(twoX[0])
 
+    let [four, setFour] = useState("75")
+
     
 
     return(
@@ -74,11 +76,18 @@ function App() {
                 </div>
                 <div>
                     <p>4x Multiplier</p>
-                    <p>75 clicks</p>
+                    <p>{four} clicks</p>
                     <button className='4x' onClick={() => {
-                        if (click >= 75) {
+                        if (click >= 75 && shopUpgrades.fourX === false) {
                             clickMod *= 4
-                            setclick(click -= 75)
+                            setclick(click - 75)
+                            shopUpgrades.fourX = true
+                            setFour(four = "300")
+                        } else if (click >= 300 && shopUpgrades.fourX2 === false) {
+                            clickMod *= 4
+                            setclick(click - 300)
+                            shopUpgrades.fourX2 = true
+                            setFour(four = "Maxxed")
                         }
                     }}>Buy</button>
                 </div>
