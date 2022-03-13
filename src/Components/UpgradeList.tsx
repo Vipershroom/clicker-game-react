@@ -6,8 +6,8 @@ const UpgradeList = (props:any) => {
         <div className='wrapper'>
             <h3>Upgrades</h3>
             <ul className='upgrade-list'>
-                <li>2x: {props.name}</li>
-                <li>4x: {}</li>
+                <li>2x: {props.x2}</li>
+                <li>4x: {props.x4}</li>
                 <li>Mr.zom: {}</li>
                 <li>Autoclicker: {}</li>
                 <li>6x: {}</li>

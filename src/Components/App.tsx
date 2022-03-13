@@ -83,11 +83,13 @@ function App() {
                             setclick(click - 75)
                             shopUpgrades.fourX = true
                             setFour(four = "300")
+                            upgradeCount.fourX += 1
                         } else if (click >= 300 && shopUpgrades.fourX2 === false) {
                             clickMod *= 4
                             setclick(click - 300)
                             shopUpgrades.fourX2 = true
                             setFour(four = "Maxxed")
+                            upgradeCount.fourX += 1
                         }
                     }}>Buy</button>
                 </div>
@@ -121,7 +123,7 @@ function App() {
                 </div>
             </div>
             :null}
-            {display? <UpgradeList name={upgradeCount.twoX} />:null}
+            {display? <UpgradeList x2={upgradeCount.twoX} x4={upgradeCount.fourX} />:null}
         </div>
     )
 }
