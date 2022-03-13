@@ -109,7 +109,14 @@ function App() {
                 <div>
                     <p>Autoclicker</p>
                     <p>200 clicks</p>
-                    <button className='autoclicker'>Buy</button>    
+                    <button className='autoclicker' onClick={() => {
+                        if (click >= 300 && shopUpgrades.autoclicker === false) {
+                            setclick(click - 50)
+                            const curClickMod = () => clickMod
+                            setInterval(() => setclick(click => click + curClickMod()), 3000)
+                            shopUpgrades.autoclicker = true
+                        }
+                    }}>Buy</button>    
                 </div>
                 <div>
                     <p>6x Multiplier</p>
