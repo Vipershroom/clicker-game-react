@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './App.scss'
+import './styles/App.scss'
 import './App'
-import './Shop.scss'
+import './styles/Shop.scss'
 import UpgradeList from './UpgradeList'
 
 let clickMod = 1

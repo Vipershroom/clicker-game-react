@@ -1,16 +1,17 @@
 .wrapper {
     margin-top: 10%;
     text-align: center;
-    margin-left: 6%;
+    margin-left: 10%;
 
     .upgrade-list {
             margin-top: 7%;
             display: flex;
             justify-content: end;
             list-style: none;
+            padding-left: 27%;
 
             li {
-                margin-right: 7%;
+                margin-left: 9%;
                 flex-shrink: 0;
             }
         }

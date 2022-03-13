@@ -1,5 +1,5 @@
 import React from 'react'
-import './Upgrade.scss'
+import './styles/Upgrade.scss'
 
 const UpgradeList = (props:any) => {
     return (
