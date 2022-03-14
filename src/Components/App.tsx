@@ -47,6 +47,8 @@ function App() {
 
     let [six, setSix] = useState('800')
 
+    let [eight, setEight] = useState(1300)
+
     return(
         <div>
             <div className="spacing">
@@ -148,8 +150,15 @@ function App() {
                 </div>
                 <div>
                     <p>8x Multiplier</p>
-                    <p>1300 clicks</p>
-                    <button className='eightX'>Buy</button>    
+                    <p>{eight} clicks</p>
+                    <button className='eightX' onClick={() => {
+                        if (click >= eight && shopUpgrades.eightX === false) {
+                            setclick(click - eight)
+                            clickMod *= 8
+                            shopUpgrades.eightX = true
+                            upgradeCount.eightX += 1
+                        }
+                    }}>Buy</button>    
                 </div>
             </div>
             :null}
