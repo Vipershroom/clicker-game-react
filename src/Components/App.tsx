@@ -17,7 +17,7 @@ let shopUpgrades = {
     autoclicker: false,
     sixX: false,
     sixX2: false,
-    infinite: false,
+    eightX: false,
 }
 
 let upgradeCount = {
@@ -26,7 +26,7 @@ let upgradeCount = {
     zom: 0,
     autoclicker: 0,
     sixX: 0,
-    infinite: 0,
+    eightX: 0,
 }
 
 
@@ -147,14 +147,14 @@ function App() {
                     }}>Buy</button>    
                 </div>
                 <div>
-                    <p>10000000x Multiplier</p>
-                    <p>100000000 clicks</p>
-                    <button className='infinite'>Buy</button>    
+                    <p>8x Multiplier</p>
+                    <p>1300 clicks</p>
+                    <button className='eightX'>Buy</button>    
                 </div>
             </div>
             :null}
             {display? <UpgradeList x2={upgradeCount.twoX} x4={upgradeCount.fourX} zom={upgradeCount.zom} 
-            autoclicker={upgradeCount.autoclicker} x6={upgradeCount.sixX} infinite={upgradeCount.infinite} />:null}
+            autoclicker={upgradeCount.autoclicker} x6={upgradeCount.sixX} infinite={upgradeCount.eightX} />:null}
         </div>
     )
 }
