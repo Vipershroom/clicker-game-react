@@ -16,6 +16,7 @@ let shopUpgrades = {
     zom: false,
     autoclicker: false,
     sixX: false,
+    sixX2: false,
     infinite: false,
 }
 
@@ -32,7 +33,7 @@ let upgradeCount = {
 
 function App() {
 
-    let [click, setclick] = useState(0)
+    let [click, setclick] = useState(99999)
 
     let [display, setDisplay] = useState(false)
 
@@ -43,6 +44,8 @@ function App() {
     let [zom, setZom] = useState('50')
 
     let [autoclick, setAutoClick] = useState('500')
+
+    let [six, setSix] = useState('800')
 
     return(
         <div>
@@ -126,8 +129,22 @@ function App() {
                 </div>
                 <div>
                     <p>6x Multiplier</p>
-                    <p>500 clicks</p>
-                    <button className='6x'>Buy</button>    
+                    <p>{six} clicks</p>
+                    <button className='6x' onClick={() => {
+                        if (click >= 800 && shopUpgrades.sixX === false) {
+                            setclick(click - 800)
+                            clickMod *= 6
+                            shopUpgrades.sixX = true
+                            upgradeCount.sixX += 1
+                            setSix(six = '1500')
+                        } else if (click >= 1500 && shopUpgrades.sixX2 === false) {
+                            setclick(click - 1500)
+                            clickMod *= 6
+                            shopUpgrades.sixX2 = true
+                            upgradeCount.sixX += 1
+                            setSix(six = "Maxxed")
+                        }
+                    }}>Buy</button>    
                 </div>
                 <div>
                     <p>10000000x Multiplier</p>
