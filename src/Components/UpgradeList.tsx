@@ -11,7 +11,7 @@ const UpgradeList = (props:any) => {
                 <li>Mr.zom: {props.zom}</li>
                 <li>Autoclicker: {props.autoclicker}</li>
                 <li>6x: {props.x6}</li>
-                <li>10000000x: {props.infinite}</li>
+                <li>10000000x: {props.eightx}</li>
             </ul>
         </div>
     )
