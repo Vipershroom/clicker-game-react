@@ -157,6 +157,7 @@ function App() {
                             clickMod *= 8
                             shopUpgrades.eightX = true
                             upgradeCount.eightX += 1
+                            setEight(eight +=1)
                         }
                     }}>Buy</button>    
                 </div>
