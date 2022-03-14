@@ -39,15 +39,15 @@ function App() {
 
     let [two, setTwo] = useState(twoX[0])
 
-    let [four, setFour] = useState("75")
+    let [four, setFour] = useState("75 clicks")
 
-    let [zom, setZom] = useState('50')
+    let [zom, setZom] = useState('50 clicks')
 
-    let [autoclick, setAutoClick] = useState('500')
+    let [autoclick, setAutoClick] = useState('500 clicks')
 
-    let [six, setSix] = useState('800')
+    let [six, setSix] = useState('800 clicks')
 
-    let [eight, setEight] = useState('1300')
+    let [eight, setEight] = useState('1300 clicks')
 
     return(
         <div>
@@ -83,26 +83,26 @@ function App() {
                 </div>
                 <div>
                     <p>4x Multiplier</p>
-                    <p>{four} clicks</p>
+                    <p>{four}</p>
                     <button className='4x' onClick={() => {
                         if (click >= 75 && shopUpgrades.fourX === false) {
                             clickMod *= 4
                             setclick(click - 75)
                             shopUpgrades.fourX = true
-                            setFour(four = "300")
+                            setFour(four = "300 clicks")
                             upgradeCount.fourX += 1
                         } else if (click >= 300 && shopUpgrades.fourX2 === false) {
                             clickMod *= 4
                             setclick(click - 300)
                             shopUpgrades.fourX2 = true
-                            setFour(four = "Maxxed")
+                            setFour(four = "Maxxed!")
                             upgradeCount.fourX += 1
                         }
                     }}>Buy</button>
                 </div>
                 <div>
                     <p>Mr.Zom</p>
-                    <p>{zom} clicks</p>
+                    <p>{zom}</p>
                     <button className='zom' onClick={() => {
                         if (click >= 50 && shopUpgrades.zom === false) {
                             setclick(click - 50)
@@ -110,54 +110,54 @@ function App() {
                                 setclick(click => click + 1)
                             }, 5000)
                             shopUpgrades.zom = true
-                            setZom(zom = "Maxxed")
+                            setZom(zom = "Maxxed!")
                             upgradeCount.zom += 1
                         }
                     }}>Buy</button>    
                 </div>
                 <div>
                     <p>Autoclicker</p>
-                    <p>{autoclick} clicks</p>
+                    <p>{autoclick}</p>
                     <button className='autoclicker' onClick={() => {
                         if (click >= 500 && shopUpgrades.autoclicker === false) {
                             setclick(click - 500)
                             const curClickMod = () => clickMod
                             setInterval(() => setclick(click => click + curClickMod()), 3000)
                             shopUpgrades.autoclicker = true
-                            setAutoClick(autoclick = "Maxxed")
+                            setAutoClick(autoclick = "Maxxed!")
                             upgradeCount.autoclicker += 1
                         }
                     }}>Buy</button>    
                 </div>
                 <div>
                     <p>6x Multiplier</p>
-                    <p>{six} clicks</p>
+                    <p>{six}</p>
                     <button className='6x' onClick={() => {
                         if (click >= 800 && shopUpgrades.sixX === false) {
                             setclick(click - 800)
                             clickMod *= 6
                             shopUpgrades.sixX = true
                             upgradeCount.sixX += 1
-                            setSix(six = '1500')
+                            setSix(six = '1500 clicks')
                         } else if (click >= 1500 && shopUpgrades.sixX2 === false) {
                             setclick(click - 1500)
                             clickMod *= 6
                             shopUpgrades.sixX2 = true
                             upgradeCount.sixX += 1
-                            setSix(six = "Maxxed")
+                            setSix(six = "Maxxed!")
                         }
                     }}>Buy</button>    
                 </div>
                 <div>
                     <p>8x Multiplier</p>
-                    <p>{eight} clicks</p>
+                    <p>{eight}</p>
                     <button className='eightX' onClick={() => {
                         if (click >= 1300 && shopUpgrades.eightX === false) {
                             setclick(click - 1300)
                             clickMod *= 8
                             shopUpgrades.eightX = true
                             upgradeCount.eightX += 1
-                            setEight( eight = "Maxxed")
+                            setEight( eight = "Maxxed!")
                         }
                     }}>Buy</button>    
                 </div>
