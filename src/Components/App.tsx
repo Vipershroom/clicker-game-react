@@ -33,7 +33,7 @@ let upgradeCount = {
 
 function App() {
 
-    let [click, setclick] = useState(99999)
+    let [click, setclick] = useState(0)
 
     let [display, setDisplay] = useState(false)
 
