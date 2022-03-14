@@ -40,7 +40,9 @@ function App() {
 
     let [four, setFour] = useState("75")
 
-    
+    let [zom, setZom] = useState('50')
+
+    let [autoclick, setAutoClick] = useState('500')
 
     return(
         <div>
@@ -95,7 +97,7 @@ function App() {
                 </div>
                 <div>
                     <p>Mr.Zom</p>
-                    <p>50 clicks</p>
+                    <p>{zom} clicks</p>
                     <button className='zom' onClick={() => {
                         if (click >= 50 && shopUpgrades.zom === false) {
                             setclick(click - 50)
@@ -103,18 +105,22 @@ function App() {
                                 setclick(click => click + 1)
                             }, 5000)
                             shopUpgrades.zom = true
+                            setZom(zom = "Maxxed")
+                            upgradeCount.zom += 1
                         }
                     }}>Buy</button>    
                 </div>
                 <div>
                     <p>Autoclicker</p>
-                    <p>200 clicks</p>
+                    <p>{autoclick} clicks</p>
                     <button className='autoclicker' onClick={() => {
-                        if (click >= 300 && shopUpgrades.autoclicker === false) {
-                            setclick(click - 50)
+                        if (click >= 500 && shopUpgrades.autoclicker === false) {
+                            setclick(click - 500)
                             const curClickMod = () => clickMod
                             setInterval(() => setclick(click => click + curClickMod()), 3000)
                             shopUpgrades.autoclicker = true
+                            setAutoClick(autoclick = "Maxxed")
+                            upgradeCount.autoclicker += 1
                         }
                     }}>Buy</button>    
                 </div>
