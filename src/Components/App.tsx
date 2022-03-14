@@ -47,7 +47,7 @@ function App() {
 
     let [six, setSix] = useState('800')
 
-    let [eight, setEight] = useState(1300)
+    let [eight, setEight] = useState('1300')
 
     return(
         <div>
@@ -152,12 +152,12 @@ function App() {
                     <p>8x Multiplier</p>
                     <p>{eight} clicks</p>
                     <button className='eightX' onClick={() => {
-                        if (click >= eight && shopUpgrades.eightX === false) {
-                            setclick(click - eight)
+                        if (click >= 1300 && shopUpgrades.eightX === false) {
+                            setclick(click - 1300)
                             clickMod *= 8
                             shopUpgrades.eightX = true
                             upgradeCount.eightX += 1
-                            setEight(eight +=1)
+                            setEight( eight = "Maxxed")
                         }
                     }}>Buy</button>    
                 </div>
