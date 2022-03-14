@@ -164,7 +164,7 @@ function App() {
             </div>
             :null}
             {display? <UpgradeList x2={upgradeCount.twoX} x4={upgradeCount.fourX} zom={upgradeCount.zom} 
-            autoclicker={upgradeCount.autoclicker} x6={upgradeCount.sixX} infinite={upgradeCount.eightX} />:null}
+            autoclicker={upgradeCount.autoclicker} x6={upgradeCount.sixX} eightx={upgradeCount.eightX} />:null}
         </div>
     )
 }
