@@ -163,8 +163,13 @@ function App() {
                 </div>
             </div>
             :null}
+            {/* <br /><br /><br />
+            <div className='secret-shop'>
+                <p>k</p>
+            </div> */}
             {display? <UpgradeList x2={upgradeCount.twoX} x4={upgradeCount.fourX} zom={upgradeCount.zom} 
             autoclicker={upgradeCount.autoclicker} x6={upgradeCount.sixX} eightx={upgradeCount.eightX} />:null}
+            
         </div>
     )
 }
