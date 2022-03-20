@@ -3,6 +3,7 @@ import './styles/App.scss'
 import './App'
 import './styles/Shop.scss'
 import UpgradeList from './UpgradeList'
+import Header from './Header'
 
 let clickMod = 1
 
@@ -52,7 +53,7 @@ function App() {
     return(
         <div>
             <div className="spacing">
-            <h1>Welcome to Clicker Game</h1>
+                <Header />
                 <h3>Clicks: {click}</h3>
                 <button className="btn" onClick={() => setclick(click + clickMod)} >Click here!</button>
                 <button className="btn" onClick={() => setDisplay(!display)}>Shop</button>
