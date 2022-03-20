@@ -1,6 +1,6 @@
 ## To Do!
 
-1. Finish 8x multiplier
+1. ~~Finish 8x multiplier~~
 
 2. Polish and refactor other areas of the code
 
